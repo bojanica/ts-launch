@@ -31,6 +31,7 @@ Implemented is only one call, and that is to fetch launches by date.
 
 Future implementation:
 - implement paginated calls
+- implement filtering calls by agencies and success in launchService
 - implement other request methods
 
 ### Hook
