@@ -1,2 +1,1 @@
-# ts-launch
-scffold
+# launch-ts
