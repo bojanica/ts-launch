@@ -6,10 +6,10 @@ const BASE_URL = 'https://launchlibrary.net/1.3/';
 const LaunchService: () => object = () => {
 
     const fetchLaunches = (dates: FromTo) => {
-        const path = `launch/${dates.dateFrom}/${dates.dateTo}`;
+        const path = `launch/${dates.dateFrom}/${dates.dateTo}?limit=100`;
         return request({
             apiEndpoint: `${BASE_URL}${path}`,
-        })// normalisation here
+        })
     }
     return {
       fetchLaunchesByDate: (dates: FromTo) => (fetchLaunches(dates))

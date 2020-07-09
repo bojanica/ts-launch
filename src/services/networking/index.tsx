@@ -8,9 +8,12 @@ const request: (props: RequestProps) => Promise<object> = ({
                     return response.json()
                         .then((data) => resolve(data))
                 }
-                return reject(response);
+                return response.json()
+                    .then((data) => reject(data));
             })
-            .catch((e) => (reject(e)))
+            .catch((e) => (e.json()
+                .then((error: any) => reject(error))
+            ))
     });
 };
 

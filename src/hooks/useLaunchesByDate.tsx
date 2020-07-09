@@ -1,18 +1,6 @@
 import { useEffect, useState } from 'react';
 import launchService from "../services/launchService";
 
-interface FromTo {
-    dateFrom: string,
-    dateTo: string,
-}
-
-interface ResponseObject {
-    isLoading: boolean,
-    data: object,
-    error: object,
-}
-
-
 const useLaunchesByDate: (dates: FromTo) => ResponseObject = (dates) => {
     const [response, setResponse] = useState({ isLoading: true, data: null, error: null })
 
