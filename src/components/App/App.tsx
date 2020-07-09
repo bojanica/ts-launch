@@ -10,7 +10,10 @@ const App: React.FC = () => {
     })
 
     const [datesToFetch, setDatesToFetch] = useState({...dates})
+
+    // anytime datesToFetch changes, we will invoke the hook
     const res: ResponseObject = useLaunchesByDate(datesToFetch);
+
     const updateDate = (value: string, prop: string) => {
         setDates({
             ...dates,

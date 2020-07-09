@@ -4,7 +4,6 @@ const BASE_URL = 'https://launchlibrary.net/1.3/';
 
 
 const LaunchService: () => object = () => {
-
     const fetchLaunches = (dates: FromTo) => {
         const path = `launch/${dates.dateFrom}/${dates.dateTo}?limit=100`;
         return request({
